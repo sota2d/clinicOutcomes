@@ -5,3 +5,9 @@ export interface FilterOption {
   label: string;
   value: number;
 }
+
+export interface ChartSlice {
+  label: string;
+  percent: number;
+  color: string;
+}

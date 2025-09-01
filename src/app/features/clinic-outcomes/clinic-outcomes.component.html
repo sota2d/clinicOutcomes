@@ -54,20 +54,24 @@
     <div class="col-12 col-xl-6">
       <div class="card h-100">
         <div class="card-body">
-          <h2 class="h5 mb-3">Glucose Management Indicator (GMI)</h2>
+          <h2 class="h4 mb-3">Glucose Management Indicator (GMI)</h2>
 
           <div class="d-flex flex-column align-items-center text-center gap-3">
             <div>
-              <div class="text-uppercase small text-muted">Average GMI</div>
-              <div class="display-6 fw-semibold">6.7%</div>
+              <div class="text-uppercase small text-muted mt-3">
+                Average GMI
+              </div>
+              <div class="display-6 fw-normal mb-4 text-nowrap">
+                6.7<span class="ms-1 fs-6">%</span>
+              </div>
             </div>
 
             <div class="w-100">
               <div
-                class="border bg-light d-flex align-items-center justify-content-center mx-auto"
-                style="width: 200px; height: 250px"
+                class="d-flex flex-column align-items-center justify-content-center mx-auto"
               >
-                TIR Chart Placeholder
+                <gmi-chart [data]="gmi"></gmi-chart>
+                <span>GMI(%)</span>
               </div>
             </div>
           </div>
