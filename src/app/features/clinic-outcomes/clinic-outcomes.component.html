@@ -1,0 +1,74 @@
+<!-- app.component.html -->
+<div class="container-xxl py-5">
+  <header class="d-flex align-items-center justify-content-between gap-3 mb-3">
+    <h1 class="h3 mb-0">Clinic Outcomes</h1>
+  </header>
+
+  <div class="mb-3 d-flex align-items-center justify-content-between">
+    <app-filter-button-group />
+    <button
+      class="btn btn-outline-primary btn-sm rounded-pill d-flex align-items-center gap-2 px-5 btn-thick-outline"
+    >
+      <i class="bi bi-printer"></i>
+      <span>Print</span>
+    </button>
+  </div>
+
+  <p class="text-muted small mb-1">
+    Showing 120 patients from last 30 days of available data from 01/01/1111 to
+    12/31/2222.
+  </p>
+  <p class="text-muted text-xs fst-italic mb-4">
+    Only patients with a minimum of 10 days of SG data are included. Last
+    updated on 01/01/0001
+  </p>
+
+  <div class="row g-4">
+    <!--     Time in range card -->
+    <div class="col-12 col-xl-6">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <h2 class="h5 mb-0">Time in range</h2>
+            <span>tooltip</span>
+          </div>
+          <div class="row g-4 justify-content-center">
+            <div class="col-12 col-sm-5">
+              <div
+                class="border bg-light d-flex align-items-center justify-content-center mx-auto"
+                style="width: 200px; height: 300px"
+              >
+                TIR Chart Placeholder
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GMI card -->
+    <div class="col-12 col-xl-6">
+      <div class="card h-100">
+        <div class="card-body">
+          <h2 class="h5 mb-3">Glucose Management Indicator (GMI)</h2>
+
+          <div class="d-flex flex-column align-items-center text-center gap-3">
+            <div>
+              <div class="text-uppercase small text-muted">Average GMI</div>
+              <div class="display-6 fw-semibold">6.7%</div>
+            </div>
+
+            <div class="w-100">
+              <div
+                class="border bg-light d-flex align-items-center justify-content-center mx-auto"
+                style="width: 200px; height: 250px"
+              >
+                TIR Chart Placeholder
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { FilterButtonGroupComponent } from './features/filter-button-group/filter-button-group.component';
+import { ClinicOutcomesComponent } from './features/clinic-outcomes/clinic-outcomes.component';
 
 @Component({
   selector: 'app-root',
-  imports: [FilterButtonGroupComponent],
-  templateUrl: './app.component.html',
+  imports: [ClinicOutcomesComponent],
+  template: '<app-clinic-outcomes/>',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {}
