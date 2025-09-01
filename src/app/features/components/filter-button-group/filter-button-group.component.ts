@@ -1,5 +1,5 @@
 import { Component, input, output, model } from '@angular/core';
-import { FilterOption } from '../../../core/models';
+import { FilterOption, TimeRange } from '../../../core/models';
 
 @Component({
   selector: 'app-filter-button-group',
@@ -12,10 +12,10 @@ import { FilterOption } from '../../../core/models';
 // so I used it here to show that I'm familiar with the syntax.
 export class FilterButtonGroupComponent {
   options = input.required<ReadonlyArray<FilterOption>>();
-  selectedOption = model.required<number>();
-  selected = output<number>();
+  selectedOption = model.required<TimeRange>();
+  selected = output<TimeRange>();
 
-  onSelectOption(value: number) {
+  onSelectOption(value: TimeRange) {
     this.selectedOption.set(value);
   }
 }
