@@ -1,0 +1,8 @@
+.btn.btn-outline-primary {
+  --bs-btn-active-bg: var(--bs-custom-blue);
+  --bs-btn-hover-color: var(--bs-custom-blue);
+}
+
+.btn-check:not(:checked) + .btn.btn-outline-primary {
+  color: var(--bs-custom-blue);
+}

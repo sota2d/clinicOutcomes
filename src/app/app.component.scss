@@ -1,16 +1,7 @@
-.btn-thick-outline {
-  border: 1.5px solid var(--bs-custom-blue);
-  font-weight: 500;
-  font-size: 0.75rem;
-  -webkit-text-stroke: 0.5px currentColor;
-  color: var(--bs-custom-blue);
 
-  &:hover {
-    background-color: var(--bs-custom-blue);
-    color: #fff;
+  .text-xs {
+    font-size: 0.75rem;
   }
-}
 
-.text-xs {
-  font-size: 0.75rem;
-}
+
+

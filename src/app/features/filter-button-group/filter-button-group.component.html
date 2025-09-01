@@ -1,1 +1,31 @@
-<p>filter-button-group works!</p>
+<div
+  role="radiogroup"
+  aria-label="Button group for filtering date range 30|60|90"
+>
+  <div class="btn-group" role="group">
+    @for (option of options; track option.id ) {
+
+    <input
+      type="radio"
+      class="btn-check"
+      name="radio-group"
+      [id]="option.id"
+      [value]="option.value"
+      [checked]="selectedOption() === option.value"
+      (change)="onSelectOption($event)"
+    />
+
+    <label
+      [for]="option.id"
+      class="btn btn-outline-primary btn-sm px-4 btn-thick-outline"
+      [class.rounded-pill]="$first || $last"
+      [class.rounded-end-0]="$first"
+      [class.rounded-start-0]="$last"
+      [class.rounded-0]="!$first && !$last"
+    >
+      {{ option.label }}
+    </label>
+
+    }
+  </div>
+</div>

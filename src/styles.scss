@@ -5,10 +5,22 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  // You can add other body styles here as needed
   font-weight: 400;
 }
 
 :root {
   --bs-custom-blue: rgb(16,16,234);
+}
+
+.btn-thick-outline {
+  border: 1px solid var(--bs-custom-blue);
+  font-weight: 500;
+  font-size: 0.75rem;
+  -webkit-text-stroke: 0.5px currentColor;
+  color: var(--bs-custom-blue);
+
+  &:hover {
+    background-color: var(--bs-custom-blue);
+    color: #fff;
+  }
 }
