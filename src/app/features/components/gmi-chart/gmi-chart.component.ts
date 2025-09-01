@@ -26,6 +26,7 @@ export class GmiChartComponent {
         datasets: [{ data: values, backgroundColor: colors, borderWidth: 0 }],
       },
       options: {
+        aspectRatio: 1.5,
         responsive: true,
         plugins: {
           legend: { position: 'bottom', labels: { color: '#9aa3b2' } },

@@ -27,8 +27,8 @@
     updated on 01/01/0001
   </p>
 
+  <!--     Time in range card -->
   <div class="row g-4">
-    <!--     Time in range card -->
     <div class="col-12 col-xl-6">
       <div class="card h-100">
         <div class="card-body">
@@ -36,15 +36,11 @@
             <h2 class="h5 mb-0">Time in range</h2>
             <span>tooltip</span>
           </div>
-          <div class="row g-4 justify-content-center">
-            <div class="col-12 col-sm-5">
-              <div
-                class="border bg-light d-flex align-items-center justify-content-center mx-auto"
-                style="width: 200px; height: 300px"
-              >
-                TIR Chart Placeholder
-              </div>
-            </div>
+          <div
+            class="d-flex flex-column flex-grow-1 d-flex align-items-center justify-content-center"
+          >
+            <tir-chart class="w-100 h-100" [data]="tir"></tir-chart>
+            <span>mg/dl</span>
           </div>
         </div>
       </div>
@@ -55,7 +51,6 @@
       <div class="card h-100">
         <div class="card-body">
           <h2 class="h4 mb-3">Glucose Management Indicator (GMI)</h2>
-
           <div class="d-flex flex-column align-items-center text-center gap-3">
             <div>
               <div class="text-uppercase small text-muted mt-3">
@@ -65,7 +60,6 @@
                 6.7<span class="ms-1 fs-6">%</span>
               </div>
             </div>
-
             <div class="w-100">
               <div
                 class="d-flex flex-column align-items-center justify-content-center mx-auto"
