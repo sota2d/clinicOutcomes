@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+:root {
+  --bs-custom-blue: rgb(16,16,234);
+}
+
+.btn-thick-outline {
+  border: 1px solid var(--bs-custom-blue);
+  font-weight: 500;
+  font-size: 0.75rem;
+  -webkit-text-stroke: 0.5px currentColor;
+  color: var(--bs-custom-blue);
+
+  &:hover {
+    background-color: var(--bs-custom-blue);
+    color: #fff;
+  }
+}
