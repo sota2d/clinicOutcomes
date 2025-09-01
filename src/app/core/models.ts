@@ -1,0 +1,7 @@
+export type TimeRange = 30 | 60 | 90;
+
+export interface FilterOption {
+  id: string;
+  label: string;
+  value: number;
+}
