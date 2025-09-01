@@ -1,1 +1,9 @@
-<p>tir-chart works!</p>
+<div class="chart-flex">
+  <canvas
+    baseChart
+    [data]="config?.data ?? { labels: [], datasets: [] }"
+    [type]="config?.type ?? 'bar'"
+    [options]="config?.options"
+  >
+  </canvas>
+</div>

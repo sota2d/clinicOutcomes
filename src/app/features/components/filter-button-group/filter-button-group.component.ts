@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, input, output, model } from '@angular/core';
+import { FilterOption } from '../../../core/models';
 
 @Component({
   selector: 'app-filter-button-group',
@@ -6,20 +7,15 @@ import { Component, signal } from '@angular/core';
   templateUrl: './filter-button-group.component.html',
   styleUrl: './filter-button-group.component.scss',
 })
+
+//I wasn't sure if I should use signals or input decorators because I don't know what you guys are using in your projects.
+// so I used it here to show that I'm familiar with the syntax.
 export class FilterButtonGroupComponent {
-  options = [
-    { id: 'opt1', label: '30 days', value: '30' },
-    { id: 'opt2', label: '60 days', value: '60' },
-    { id: 'opt3', label: '90 days', value: '90' },
-  ];
-  //I wasn't sure if I should use signals or input decorators because I don't know what you guys are using in your projects.
-  // so I used it here to show that I'm familiar with the syntax.
+  options = input.required<ReadonlyArray<FilterOption>>();
+  selectedOption = model.required<number>();
+  selected = output<number>();
 
-  selectedOption = signal('30');
-
-  onSelectOption(event: Event) {
-    const value = (event.target as HTMLInputElement).value;
+  onSelectOption(value: number) {
     this.selectedOption.set(value);
-    console.log('Selected option:', value);
   }
 }

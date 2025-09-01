@@ -1,1 +1,7 @@
-<p>gmi-chart works!</p>
+<canvas
+  baseChart
+  [data]="config?.data ?? { labels: [], datasets: [] }"
+  [type]="config?.type ?? 'pie'"
+  [options]="config?.options"
+>
+</canvas>
