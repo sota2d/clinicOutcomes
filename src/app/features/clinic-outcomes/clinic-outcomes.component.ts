@@ -18,6 +18,8 @@ import { TirChartComponent } from '../components/tir-chart/tir-chart.component';
 import { ClinicActions } from '../../store/clinic.actions';
 import { AsyncPipe } from '@angular/common';
 import { ClinicMetaPipe } from './meta-lines.pipe';
+import { NgbTooltip } from '@ng-bootstrap/ng-bootstrap';
+import { tooltipAdjustment } from '../../core/utils';
 
 @Component({
   selector: 'app-clinic-outcomes',
@@ -27,6 +29,7 @@ import { ClinicMetaPipe } from './meta-lines.pipe';
     TirChartComponent,
     AsyncPipe,
     ClinicMetaPipe,
+    NgbTooltip,
   ],
   templateUrl: './clinic-outcomes.component.html',
   styleUrls: ['./clinic-outcomes.component.scss'],
@@ -42,6 +45,7 @@ export class ClinicOutcomesComponent implements OnInit {
   activePatients$ = this.store.select(selectActivePatients);
   dateRange$ = this.store.select(selectDateRange);
   lastUpdated$ = this.store.select(selectLastUpdated);
+  tooltipOptions = tooltipAdjustment;
 
   ngOnInit() {
     this.store.dispatch(ClinicActions.init({ timeRange: 30 }));

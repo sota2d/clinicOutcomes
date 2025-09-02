@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=info');
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -24,3 +25,27 @@ body {
     color: #fff;
   }
 }
+
+.tooltip.tooltip-white {
+  --bs-tooltip-bg: #fff;
+  --bs-tooltip-color: #212529;
+  --bs-tooltip-opacity: 1;
+  --bs-tooltip-padding-x: 1.75rem;
+  --bs-tooltip-padding-y: 1.25rem;
+  --bs-tooltip-max-width: 15rem;
+  --bs-tooltip-arrow-width: 1.6rem;
+  --bs-tooltip-arrow-height: 0.75rem;
+  --bs-tooltip-arrow-color: #fff;
+}
+
+.tooltip.tooltip-white .tooltip-inner {
+  //border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+.tooltip.tooltip-white.show {
+  filter:
+
+    drop-shadow(0 4px 12px  rgba(0, 0, 0, 0.18))
+}
+
+.thinner { font-weight: 350; }

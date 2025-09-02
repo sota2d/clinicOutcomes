@@ -4,7 +4,7 @@
       { "label": "<54", "color": "#ef4444", "percent": 3 },
       { "label": "54-69", "color": "#f97316", "percent": 13 },
       { "label": "70-180", "color": "#8fda48", "percent": 70 },
-      { "label": "181-250", "color": "#f59e0b", "percent": 7 },
+      { "label": "181-250", "color": "#f6c648", "percent": 7 },
       { "label": ">250", "color": "#ef4444", "percent": 8 }
     ]
   },
@@ -13,7 +13,7 @@
       { "label": "<54", "color": "#ef4444", "percent": 2 },
       { "label": "54-69", "color": "#f97316", "percent": 14 },
       { "label": "70-180", "color": "#8fda48", "percent": 73 },
-      { "label": "181-250", "color": "#f59e0b", "percent": 6 },
+      { "label": "181-250", "color": "#f6c648", "percent": 6 },
       { "label": ">250", "color": "#ef4444", "percent": 5 }
     ]
   },
@@ -22,7 +22,7 @@
       { "label": "<54", "color": "#ef4444", "percent": 3 },
       { "label": "54-69", "color": "#f97316", "percent": 11 },
       { "label": "70-180", "color": "#8fda48", "percent": 73 },
-      { "label": "181-250", "color": "#f59e0b", "percent": 7 },
+      { "label": "181-250", "color": "#f6c648", "percent": 7 },
       { "label": ">250", "color": "#ef4444", "percent": 6 }
     ]
   }
