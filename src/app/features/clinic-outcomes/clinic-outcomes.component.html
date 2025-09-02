@@ -17,15 +17,13 @@
       <span>Print</span>
     </button>
   </div>
-
+  @let count = (activePatients$ | async) ?? 0; @let dr = (dateRange$ | async);
+  @let updated = (lastUpdated$ | async); @let meta = ({ count: count, range:
+  selectedRange(), from: dr?.from, to: dr?.to, updated: updated } | clinicMeta);
   <p class="text-muted small mb-1">
-    Showing 120 patients from last 30 days of available data from 01/01/1111 to
-    12/31/2222.
+    {{ meta.rangeLine }}
   </p>
-  <p class="text-muted text-xs fst-italic mb-4">
-    Only patients with a minimum of 10 days of SG data are included. Last
-    updated on 01/01/0001
-  </p>
+  <p class="text-muted text-xs fst-italic mb-4">{{ meta.footnoteLine }}</p>
 
   <!--     Time in range card -->
   <div class="row g-4">
@@ -39,7 +37,10 @@
           <div
             class="d-flex flex-column flex-grow-1 d-flex align-items-center justify-content-center"
           >
-            <tir-chart class="w-100 h-100" [data]="tir"></tir-chart>
+            <tir-chart
+              class="w-100 h-100"
+              [data]="(tir$ | async) ?? []"
+            ></tir-chart>
             <span>mg/dl</span>
           </div>
         </div>
@@ -57,14 +58,14 @@
                 Average GMI
               </div>
               <div class="display-6 fw-normal mb-4 text-nowrap">
-                6.7<span class="ms-1 fs-6">%</span>
+                {{ averageGMI$ | async }}<span class="ms-1 fs-6">%</span>
               </div>
             </div>
             <div class="w-100">
               <div
                 class="d-flex flex-column align-items-center justify-content-center mx-auto"
               >
-                <gmi-chart [data]="gmi"></gmi-chart>
+                <gmi-chart [data]="(gmi$ | async) ?? []"></gmi-chart>
                 <span>GMI(%)</span>
               </div>
             </div>
